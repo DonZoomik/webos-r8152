@@ -51,6 +51,7 @@ So this module is *NOT* generic, I built it for *my* TV, it's unlikely to work a
 Tested with iperf3 towards a 10G endpoint. For UDP I used 1G bandwidth and just measured what got through.
 
 | NIC | Ingress TCP | Retries | Egress TCP | Bidirectional ingress TCP | Bidirectional egress TCP | Ingress UDP | Egress UDP |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Builtin | 96.7 Mbits/sec | 45 | 94.9 Mbits/sec | 94.0 Mbits/sec | 93.3 Mbits/sec | 95.6 Mbits/sec | 95.6 Mbits/sec |
 | RTL8153 cdc_ncm | 208 Mbits/sec | 966 | 255 Mbits/sec | 203 Mbits/sec | 84.5 Mbits/sec | 346 Mbits/sec | 261 Mbits/sec |
 | RTL8153 rt8152_oot | 333 Mbits/sec | 45 | 286 Mbits/sec | 176 Mbits/sec | 162 Mbits/sec | 343 Mbits/sec | 278 Mbits/sec |

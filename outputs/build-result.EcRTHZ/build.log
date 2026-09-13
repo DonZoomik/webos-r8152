@@ -1,0 +1,427 @@
+Staging: /tmp/lg-r8152-o22.h3OqSX
+Results: /mnt/c/Users/user/Documents/Codex/2026-09-12/i-have-a-lg-oled-tv/outputs/build-result.EcRTHZ
+aarch64-linux-gnu-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Copyright (C) 2025 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiler differs from TV GCC 11.4.0: 15.2.0. This build is for compatibility review.
+Copying the source to a path without spaces; this may take several minutes.
+make: Entering directory '/tmp/lg-r8152-o22.h3OqSX/source'
+  GEN     Makefile
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/confdata.o
+  HOSTCC  scripts/kconfig/expr.o
+  LEX     scripts/kconfig/lexer.lex.c
+  YACC    scripts/kconfig/parser.tab.[ch]
+  HOSTCC  scripts/kconfig/lexer.lex.o
+  HOSTCC  scripts/kconfig/parser.tab.o
+  HOSTCC  scripts/kconfig/preprocess.o
+  HOSTCC  scripts/kconfig/symbol.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --olddefconfig Kconfig
+#
+# configuration written to .config
+#
+make: Leaving directory '/tmp/lg-r8152-o22.h3OqSX/source'
+ GCC_VERSION 110400 -> 150200
++CC_CAN_LINK y
++CC_HAS_AUTO_VAR_INIT y
++INIT_STACK_ALL n
+make: Entering directory '/tmp/lg-r8152-o22.h3OqSX/source'
+  GEN     Makefile
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/dtc/fstree.o
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/dtc/util.o
+  LEX     scripts/dtc/dtc-lexer.lex.c
+  YACC    scripts/dtc/dtc-parser.tab.[ch]
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTLD  scripts/dtc/dtc
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/conmakehash
+  HOSTCC  scripts/sortextable
+  HOSTCC  scripts/asn1_compiler
+  HOSTCC  scripts/extract-cert
+  WRAP    arch/arm64/include/generated/uapi/asm/kvm_para.h
+  WRAP    arch/arm64/include/generated/uapi/asm/errno.h
+  WRAP    arch/arm64/include/generated/uapi/asm/ioctl.h
+  WRAP    arch/arm64/include/generated/uapi/asm/ioctls.h
+  WRAP    arch/arm64/include/generated/uapi/asm/ipcbuf.h
+  WRAP    arch/arm64/include/generated/uapi/asm/mman.h
+  WRAP    arch/arm64/include/generated/uapi/asm/msgbuf.h
+  WRAP    arch/arm64/include/generated/uapi/asm/poll.h
+  WRAP    arch/arm64/include/generated/uapi/asm/resource.h
+  WRAP    arch/arm64/include/generated/uapi/asm/sembuf.h
+  WRAP    arch/arm64/include/generated/uapi/asm/shmbuf.h
+  WRAP    arch/arm64/include/generated/uapi/asm/siginfo.h
+  WRAP    arch/arm64/include/generated/uapi/asm/socket.h
+  WRAP    arch/arm64/include/generated/uapi/asm/sockios.h
+  WRAP    arch/arm64/include/generated/uapi/asm/stat.h
+  WRAP    arch/arm64/include/generated/uapi/asm/swab.h
+  WRAP    arch/arm64/include/generated/uapi/asm/termbits.h
+  WRAP    arch/arm64/include/generated/uapi/asm/termios.h
+  WRAP    arch/arm64/include/generated/uapi/asm/types.h
+  WRAP    arch/arm64/include/generated/asm/bugs.h
+  WRAP    arch/arm64/include/generated/asm/delay.h
+  WRAP    arch/arm64/include/generated/asm/div64.h
+  WRAP    arch/arm64/include/generated/asm/dma.h
+  WRAP    arch/arm64/include/generated/asm/dma-contiguous.h
+  WRAP    arch/arm64/include/generated/asm/dma-mapping.h
+  WRAP    arch/arm64/include/generated/asm/early_ioremap.h
+  WRAP    arch/arm64/include/generated/asm/emergency-restart.h
+  WRAP    arch/arm64/include/generated/asm/hw_irq.h
+  WRAP    arch/arm64/include/generated/asm/irq_regs.h
+  WRAP    arch/arm64/include/generated/asm/kdebug.h
+  WRAP    arch/arm64/include/generated/asm/kmap_types.h
+  WRAP    arch/arm64/include/generated/asm/local.h
+  WRAP    arch/arm64/include/generated/asm/local64.h
+  WRAP    arch/arm64/include/generated/asm/mcs_spinlock.h
+  WRAP    arch/arm64/include/generated/asm/mm-arch-hooks.h
+  WRAP    arch/arm64/include/generated/asm/mmiowb.h
+  WRAP    arch/arm64/include/generated/asm/msi.h
+  WRAP    arch/arm64/include/generated/asm/qrwlock.h
+  WRAP    arch/arm64/include/generated/asm/qspinlock.h
+  WRAP    arch/arm64/include/generated/asm/serial.h
+  WRAP    arch/arm64/include/generated/asm/set_memory.h
+  WRAP    arch/arm64/include/generated/asm/switch_to.h
+  WRAP    arch/arm64/include/generated/asm/trace_clock.h
+  WRAP    arch/arm64/include/generated/asm/unaligned.h
+  WRAP    arch/arm64/include/generated/asm/user.h
+  WRAP    arch/arm64/include/generated/asm/vga.h
+  WRAP    arch/arm64/include/generated/asm/ekp_ops.h
+  UPD     include/config/kernel.release
+  UPD     include/generated/uapi/linux/version.h
+  UPD     include/generated/utsrelease.h
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/modpost.o
+/tmp/lg-r8152-o22.h3OqSX/source/scripts/mod/modpost.c: In function ‘match’:
+/tmp/lg-r8152-o22.h3OqSX/source/scripts/mod/modpost.c:860:38: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  860 |                         char *here = strstr(sym, bare);
+      |                                      ^~~~~~
+  CC      scripts/mod/devicetable-offsets.s
+  UPD     scripts/mod/devicetable-offsets.h
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTLD  scripts/mod/modpost
+  CC      kernel/bounds.s
+  UPD     include/generated/bounds.h
+  UPD     include/generated/timeconst.h
+  CC      arch/arm64/kernel/asm-offsets.s
+  UPD     include/generated/asm-offsets.h
+  CALL    /tmp/lg-r8152-o22.h3OqSX/source/scripts/checksyscalls.sh
+  CALL    /tmp/lg-r8152-o22.h3OqSX/source/scripts/atomic/check-atomics.sh
+  LDS     arch/arm64/kernel/vdso/vdso.lds
+  CC      arch/arm64/kernel/vdso/vgettimeofday.o
+  AS      arch/arm64/kernel/vdso/note.o
+  AS      arch/arm64/kernel/vdso/sigreturn.o
+  LD      arch/arm64/kernel/vdso/vdso.so.dbg
+  VDSOSYM include/generated/vdso-offsets.h
+  LDS     arch/arm64/kernel/vdso32/vdso.lds
+  CC32    arch/arm64/kernel/vdso32/note.o
+  CC32    arch/arm64/kernel/vdso32/vgettimeofday.o
+  AS32    arch/arm64/kernel/vdso32/sigreturn.o
+  LD32    arch/arm64/kernel/vdso32/vdso.so.raw
+  HOSTCC  arch/arm64/kernel/vdso32/../../../arm/vdso/vdsomunge
+  MUNGE   arch/arm64/kernel/vdso32/vdso.so.dbg
+  VDSOSYM include/generated/vdso32-offsets.h
+  LDS     scripts/module.lds
+make: Leaving directory '/tmp/lg-r8152-o22.h3OqSX/source'
+make: Entering directory '/tmp/lg-r8152-o22.h3OqSX/source'
+  CC [M]  /tmp/lg-r8152-o22.h3OqSX/driver/r8152.o
+/tmp/lg-r8152-o22.h3OqSX/driver/r8152.c: In function ‘temperature_show’:
+/tmp/lg-r8152-o22.h3OqSX/driver/r8152.c:34050:47: warning: universal character names are only valid in C++ and C99
+34050 |         sprintf(buf, "%d \u2103 (%d \u2109)\n", temp, temp * 9 / 5 + 32);
+      |                                               ^
+/tmp/lg-r8152-o22.h3OqSX/driver/r8152.c:34050:47: warning: universal character names are only valid in C++ and C99
+  LD [M]  /tmp/lg-r8152-o22.h3OqSX/driver/r8152_oot.o
+
+  WARNING: Symbol version dump ./Module.symvers
+           is missing; modules will have no dependencies and modversions.
+
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC [M]  /tmp/lg-r8152-o22.h3OqSX/driver/r8152_oot.mod.o
+  LD [M]  /tmp/lg-r8152-o22.h3OqSX/driver/r8152_oot.ko
+make: Leaving directory '/tmp/lg-r8152-o22.h3OqSX/source'
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              REL (Relocatable file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          0 (bytes into file)
+  Start of section headers:          2604720 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           0 (bytes)
+  Number of program headers:         0
+  Size of section headers:           64 (bytes)
+  Number of section headers:         53
+  Section header string table index: 52
+
+String dump of section '.modinfo':
+  [     0]  version=v2.22.1 (2026/06/03)
+  [    1d]  license=GPL
+  [    29]  description=Realtek RTL8152/RTL8153 Based USB Ethernet Adapters
+  [    69]  author=Realtek nic sw <nic_swsd@realtek.com>
+  [    96]  srcversion=F80F21800B80AE6B3192A62
+  [    b9]  alias=usb:v0B05p1D91d*dc*dsc*dp*ic02isc0Dip00in*
+  [    ea]  alias=usb:v0B05p1D91d*dc*dsc*dp*ic02isc06ip00in*
+  [   11b]  alias=usb:v0B05p1D91d*dc*dsc*dp*icFFisc*ip*in*
+  [   14a]  alias=usb:v0B05p1976d*dc*dsc*dp*ic02isc0Dip00in*
+  [   17b]  alias=usb:v0B05p1976d*dc*dsc*dp*ic02isc06ip00in*
+  [   1ac]  alias=usb:v0B05p1976d*dc*dsc*dp*icFFisc*ip*in*
+  [   1db]  alias=usb:v2BAFp0012d*dc*dsc*dp*ic02isc0Dip00in*
+  [   20c]  alias=usb:v2BAFp0012d*dc*dsc*dp*ic02isc06ip00in*
+  [   23d]  alias=usb:v2BAFp0012d*dc*dsc*dp*icFFisc*ip*in*
+  [   26c]  alias=usb:v2357p0601d*dc*dsc*dp*ic02isc0Dip00in*
+  [   29d]  alias=usb:v2357p0601d*dc*dsc*dp*ic02isc06ip00in*
+  [   2ce]  alias=usb:v2357p0601d*dc*dsc*dp*icFFisc*ip*in*
+  [   2fd]  alias=usb:v0955p09FFd*dc*dsc*dp*ic02isc0Dip00in*
+  [   32e]  alias=usb:v0955p09FFd*dc*dsc*dp*ic02isc06ip00in*
+  [   35f]  alias=usb:v0955p09FFd*dc*dsc*dp*icFFisc*ip*in*
+  [   38e]  alias=usb:v13B1p0041d*dc*dsc*dp*ic02isc0Dip00in*
+  [   3bf]  alias=usb:v13B1p0041d*dc*dsc*dp*ic02isc06ip00in*
+  [   3f0]  alias=usb:v13B1p0041d*dc*dsc*dp*icFFisc*ip*in*
+  [   41f]  alias=usb:v17EFpA387d*dc*dsc*dp*ic02isc0Dip00in*
+  [   450]  alias=usb:v17EFpA387d*dc*dsc*dp*ic02isc06ip00in*
+  [   481]  alias=usb:v17EFpA387d*dc*dsc*dp*icFFisc*ip*in*
+  [   4b0]  alias=usb:v17EFpA359d*dc*dsc*dp*ic02isc0Dip00in*
+  [   4e1]  alias=usb:v17EFpA359d*dc*dsc*dp*ic02isc06ip00in*
+  [   512]  alias=usb:v17EFpA359d*dc*dsc*dp*icFFisc*ip*in*
+  [   541]  alias=usb:v17EFp8153d*dc*dsc*dp*ic02isc0Dip00in*
+  [   572]  alias=usb:v17EFp8153d*dc*dsc*dp*ic02isc06ip00in*
+  [   5a3]  alias=usb:v17EFp8153d*dc*dsc*dp*icFFisc*ip*in*
+  [   5d2]  alias=usb:v17EFp721Ed*dc*dsc*dp*ic02isc0Dip00in*
+  [   603]  alias=usb:v17EFp721Ed*dc*dsc*dp*ic02isc06ip00in*
+  [   634]  alias=usb:v17EFp721Ed*dc*dsc*dp*icFFisc*ip*in*
+  [   663]  alias=usb:v17EFp7214d*dc*dsc*dp*ic02isc0Dip00in*
+  [   694]  alias=usb:v17EFp7214d*dc*dsc*dp*ic02isc06ip00in*
+  [   6c5]  alias=usb:v17EFp7214d*dc*dsc*dp*icFFisc*ip*in*
+  [   6f4]  alias=usb:v17EFp720Cd*dc*dsc*dp*ic02isc0Dip00in*
+  [   725]  alias=usb:v17EFp720Cd*dc*dsc*dp*ic02isc06ip00in*
+  [   756]  alias=usb:v17EFp720Cd*dc*dsc*dp*icFFisc*ip*in*
+  [   785]  alias=usb:v17EFp720Bd*dc*dsc*dp*ic02isc0Dip00in*
+  [   7b6]  alias=usb:v17EFp720Bd*dc*dsc*dp*ic02isc06ip00in*
+  [   7e7]  alias=usb:v17EFp720Bd*dc*dsc*dp*icFFisc*ip*in*
+  [   816]  alias=usb:v17EFp720Ad*dc*dsc*dp*ic02isc0Dip00in*
+  [   847]  alias=usb:v17EFp720Ad*dc*dsc*dp*ic02isc06ip00in*
+  [   878]  alias=usb:v17EFp720Ad*dc*dsc*dp*icFFisc*ip*in*
+  [   8a7]  alias=usb:v17EFp7205d*dc*dsc*dp*ic02isc0Dip00in*
+  [   8d8]  alias=usb:v17EFp7205d*dc*dsc*dp*ic02isc06ip00in*
+  [   909]  alias=usb:v17EFp7205d*dc*dsc*dp*icFFisc*ip*in*
+  [   938]  alias=usb:v17EFp3098d*dc*dsc*dp*ic02isc0Dip00in*
+  [   969]  alias=usb:v17EFp3098d*dc*dsc*dp*ic02isc06ip00in*
+  [   99a]  alias=usb:v17EFp3098d*dc*dsc*dp*icFFisc*ip*in*
+  [   9c9]  alias=usb:v17EFp3082d*dc*dsc*dp*ic02isc0Dip00in*
+  [   9fa]  alias=usb:v17EFp3082d*dc*dsc*dp*ic02isc06ip00in*
+  [   a2b]  alias=usb:v17EFp3082d*dc*dsc*dp*icFFisc*ip*in*
+  [   a5a]  alias=usb:v17EFp3069d*dc*dsc*dp*ic02isc0Dip00in*
+  [   a8b]  alias=usb:v17EFp3069d*dc*dsc*dp*ic02isc06ip00in*
+  [   abc]  alias=usb:v17EFp3069d*dc*dsc*dp*icFFisc*ip*in*
+  [   aeb]  alias=usb:v17EFp3062d*dc*dsc*dp*ic02isc0Dip00in*
+  [   b1c]  alias=usb:v17EFp3062d*dc*dsc*dp*ic02isc06ip00in*
+  [   b4d]  alias=usb:v17EFp3062d*dc*dsc*dp*icFFisc*ip*in*
+  [   b7c]  alias=usb:v17EFp3057d*dc*dsc*dp*ic02isc0Dip00in*
+  [   bad]  alias=usb:v17EFp3057d*dc*dsc*dp*ic02isc06ip00in*
+  [   bde]  alias=usb:v17EFp3057d*dc*dsc*dp*icFFisc*ip*in*
+  [   c0d]  alias=usb:v17EFp3054d*dc*dsc*dp*ic02isc0Dip00in*
+  [   c3e]  alias=usb:v17EFp3054d*dc*dsc*dp*ic02isc06ip00in*
+  [   c6f]  alias=usb:v17EFp3054d*dc*dsc*dp*icFFisc*ip*in*
+  [   c9e]  alias=usb:v17EFp3052d*dc*dsc*dp*ic02isc0Dip00in*
+  [   ccf]  alias=usb:v17EFp3052d*dc*dsc*dp*ic02isc06ip00in*
+  [   d00]  alias=usb:v17EFp3052d*dc*dsc*dp*icFFisc*ip*in*
+  [   d2f]  alias=usb:v17EFp304Fd*dc*dsc*dp*ic02isc0Dip00in*
+  [   d60]  alias=usb:v17EFp304Fd*dc*dsc*dp*ic02isc06ip00in*
+  [   d91]  alias=usb:v17EFp304Fd*dc*dsc*dp*icFFisc*ip*in*
+  [   dc0]  alias=usb:v04E8pA101d*dc*dsc*dp*ic02isc0Dip00in*
+  [   df1]  alias=usb:v04E8pA101d*dc*dsc*dp*ic02isc06ip00in*
+  [   e22]  alias=usb:v04E8pA101d*dc*dsc*dp*icFFisc*ip*in*
+  [   e51]  alias=usb:v045Ep0C5Ed*dc*dsc*dp*ic02isc0Dip00in*
+  [   e82]  alias=usb:v045Ep0C5Ed*dc*dsc*dp*ic02isc06ip00in*
+  [   eb3]  alias=usb:v045Ep0C5Ed*dc*dsc*dp*icFFisc*ip*in*
+  [   ee2]  alias=usb:v045Ep0927d*dc*dsc*dp*ic02isc0Dip00in*
+  [   f13]  alias=usb:v045Ep0927d*dc*dsc*dp*ic02isc06ip00in*
+  [   f44]  alias=usb:v045Ep0927d*dc*dsc*dp*icFFisc*ip*in*
+  [   f73]  alias=usb:v045Ep07C6d*dc*dsc*dp*ic02isc0Dip00in*
+  [   fa4]  alias=usb:v045Ep07C6d*dc*dsc*dp*ic02isc06ip00in*
+  [   fd5]  alias=usb:v045Ep07C6d*dc*dsc*dp*icFFisc*ip*in*
+  [  1004]  alias=usb:v045Ep07ABd*dc*dsc*dp*ic02isc0Dip00in*
+  [  1035]  alias=usb:v045Ep07ABd*dc*dsc*dp*ic02isc06ip00in*
+  [  1066]  alias=usb:v045Ep07ABd*dc*dsc*dp*icFFisc*ip*in*
+  [  1095]  alias=usb:v0BDAp815Ad*dc*dsc*dp*ic02isc0Dip00in*
+  [  10c6]  alias=usb:v0BDAp815Ad*dc*dsc*dp*ic02isc06ip00in*
+  [  10f7]  alias=usb:v0BDAp815Ad*dc*dsc*dp*icFFisc*ip*in*
+  [  1126]  alias=usb:v0BDAp8157d*dc*dsc*dp*ic02isc0Dip00in*
+  [  1157]  alias=usb:v0BDAp8157d*dc*dsc*dp*ic02isc06ip00in*
+  [  1188]  alias=usb:v0BDAp8157d*dc*dsc*dp*icFFisc*ip*in*
+  [  11b7]  alias=usb:v0BDAp8156d*dc*dsc*dp*ic02isc0Dip00in*
+  [  11e8]  alias=usb:v0BDAp8156d*dc*dsc*dp*ic02isc06ip00in*
+  [  1219]  alias=usb:v0BDAp8156d*dc*dsc*dp*icFFisc*ip*in*
+  [  1248]  alias=usb:v0BDAp8155d*dc*dsc*dp*ic02isc0Dip00in*
+  [  1279]  alias=usb:v0BDAp8155d*dc*dsc*dp*ic02isc06ip00in*
+  [  12aa]  alias=usb:v0BDAp8155d*dc*dsc*dp*icFFisc*ip*in*
+  [  12d9]  alias=usb:v0BDAp8153d*dc*dsc*dp*ic02isc0Dip00in*
+  [  130a]  alias=usb:v0BDAp8153d*dc*dsc*dp*ic02isc06ip00in*
+  [  133b]  alias=usb:v0BDAp8153d*dc*dsc*dp*icFFisc*ip*in*
+  [  136a]  alias=usb:v0BDAp8152d*dc*dsc*dp*ic02isc0Dip00in*
+  [  139b]  alias=usb:v0BDAp8152d*dc*dsc*dp*ic02isc06ip00in*
+  [  13cc]  alias=usb:v0BDAp8152d*dc*dsc*dp*icFFisc*ip*in*
+  [  13fb]  alias=usb:v0BDAp8053d*dc*dsc*dp*ic02isc0Dip00in*
+  [  142c]  alias=usb:v0BDAp8053d*dc*dsc*dp*ic02isc06ip00in*
+  [  145d]  alias=usb:v0BDAp8053d*dc*dsc*dp*icFFisc*ip*in*
+  [  148c]  alias=usb:v0BDAp8050d*dc*dsc*dp*ic02isc0Dip00in*
+  [  14bd]  alias=usb:v0BDAp8050d*dc*dsc*dp*ic02isc06ip00in*
+  [  14ee]  alias=usb:v0BDAp8050d*dc*dsc*dp*icFFisc*ip*in*
+  [  151d]  depends=
+  [  1526]  name=r8152_oot
+  [  1535]  vermagic=5.4.268-329.ptl4tv.5 SMP preempt mod_unload aarch64
+
+                 U __alloc_pages_nodemask
+                 U __arch_copy_from_user
+                 U __arch_copy_to_user
+                 U __dev_kfree_skb_any
+                 U __dynamic_dev_dbg
+                 U __dynamic_netdev_dbg
+                 U __free_pages
+                 U __kmalloc
+                 U __local_bh_enable_ip
+                 U __mutex_init
+                 U __napi_alloc_skb
+                 U __napi_schedule
+                 U __pskb_pull_tail
+                 U __put_page
+                 U __skb_gso_segment
+                 U __stack_chk_fail
+                 U __tasklet_schedule
+                 U __warn_printk
+                 U _dev_err
+                 U _dev_info
+                 U _raw_spin_lock
+                 U _raw_spin_lock_bh
+                 U _raw_spin_lock_irqsave
+                 U _raw_spin_unlock
+                 U _raw_spin_unlock_bh
+                 U _raw_spin_unlock_irqrestore
+                 U alloc_etherdev_mqs
+                 U arm64_const_caps_ready
+                 U cancel_delayed_work_sync
+                 U capable
+                 U consume_skb
+                 U cpu_hwcap_keys
+                 U crc32_le
+                 U csum_ipv6_magic
+                 U debug_smp_processor_id
+                 U delayed_work_timer_fn
+                 U dev_set_mac_address
+                 U device_set_wakeup_enable
+                 U dql_completed
+                 U dql_reset
+                 U eth_platform_get_mac_address
+                 U eth_type_trans
+                 U eth_validate_addr
+                 U ethtool_op_get_link
+                 U free_netdev
+                 U get_random_bytes
+                 U init_timer_key
+                 U jiffies
+                 U kfree
+                 U kmalloc_caches
+                 U kmem_cache_alloc_trace
+                 U kmemdup
+                 U ktime_get_mono_fast_ns
+                 U memcpy
+                 U memset
+                 U msleep
+                 U mutex_lock
+                 U mutex_lock_interruptible
+                 U mutex_trylock
+                 U mutex_unlock
+                 U napi_complete_done
+                 U napi_disable
+                 U napi_get_frags
+                 U napi_gro_frags
+                 U napi_gro_receive
+                 U napi_schedule_prep
+                 U net_ratelimit
+                 U netdev_err
+                 U netdev_info
+                 U netdev_notice
+                 U netdev_warn
+                 U netif_carrier_off
+                 U netif_carrier_on
+                 U netif_device_attach
+                 U netif_device_detach
+                 U netif_napi_add
+                 U netif_napi_del
+                 U netif_schedule_queue
+                 U netif_tx_wake_queue
+                 U preempt_count_add
+                 U pskb_expand_head
+                 U queue_delayed_work_on
+                 U register_netdev
+                 U register_pm_notifier
+                 U rtnl_lock
+                 U rtnl_unlock
+                 U sg_init_table
+                 U skb_add_rx_frag
+                 U skb_checksum_help
+                 U skb_copy_bits
+                 U skb_copy_expand
+                 U skb_push
+                 U skb_put
+                 U skb_queue_tail
+                 U skb_to_sgvec_nomark
+                 U skb_tstamp_tx
+                 U snprintf
+                 U sprintf
+                 U sscanf
+                 U strlen
+                 U strncmp
+                 U strscpy
+                 U sysfs_create_group
+                 U sysfs_remove_group
+                 U system_long_wq
+                 U system_wq
+                 U tasklet_init
+                 U tasklet_kill
+                 U unregister_netdev
+                 U unregister_pm_notifier
+                 U usb_alloc_urb
+                 U usb_autopm_get_interface
+                 U usb_autopm_get_interface_async
+                 U usb_autopm_put_interface
+                 U usb_autopm_put_interface_async
+                 U usb_control_msg
+                 U usb_deregister
+                 U usb_driver_set_configuration
+                 U usb_enable_lpm
+                 U usb_find_common_endpoints
+                 U usb_free_urb
+                 U usb_kill_urb
+                 U usb_queue_reset_device
+                 U usb_register_driver
+                 U usb_reset_device
+                 U usb_submit_urb
+                 U usleep_range
+                 U work_busy
+fe1691622747c106af44f7834675ec75ca3327a797c6bbec394e2998db66e8cb  /mnt/c/Users/user/Documents/Codex/2026-09-12/i-have-a-lg-oled-tv/outputs/build-result.EcRTHZ/r8152_oot.ko
+a6d73e1d252e71d59ff7886ffa8bdddea126001e7c3360234a2af4424b844928  /mnt/c/Users/user/Documents/Codex/2026-09-12/i-have-a-lg-oled-tv/outputs/build-result.EcRTHZ/effective.config
+
+Built module and audit files: /mnt/c/Users/user/Documents/Codex/2026-09-12/i-have-a-lg-oled-tv/outputs/build-result.EcRTHZ
+USB layout assertions passed. Review config-differences.txt and build.log before a TV attach test.

@@ -43,7 +43,21 @@ So this module is *NOT* generic, I built it for *my* TV, it's unlikely to work a
 
 # Possible issues
 * If both NICs (builtin and USB) are connected, Linux may route egress via built-in eth0 so you don't see increased bandwidth. TL;DR: disconnect builtin NIC when the module starts working.
-* Having scatter-gather enabled causes TV's USB host to die after some time. It is disabled at driver attach.
+* Having scatter-gather enabled causes TV's USB host to die after some time. It is disabled at driver attach. There's a minor performance impact, a few percent.
+* 2.5G RTL8156 links at 1G but that's driver limitation as 2.5G is negotiated only on USB3+. At 480M USB2 it hardly matters.
+
+# Performance
+
+Tested with iperf3 towards a 10G endpoint. For UDP I used 1G bandwidth and just measured what got through.
+
+| NIC | Ingress TCP | Retries | Egress TCP | Bidirectional ingress TCP | Bidirectional egress TCP | Ingress UDP | Egress UDP |
+| Builtin | 96.7 Mbits/sec | 45 | 94.9 Mbits/sec | 94.0 Mbits/sec | 93.3 Mbits/sec | 95.6 Mbits/sec | 95.6 Mbits/sec |
+| RTL8153 cdc_ncm | 208 Mbits/sec | 966 | 255 Mbits/sec | 203 Mbits/sec | 84.5 Mbits/sec | 346 Mbits/sec | 261 Mbits/sec |
+| RTL8153 rt8152_oot | 333 Mbits/sec | 45 | 286 Mbits/sec | 176 Mbits/sec | 162 Mbits/sec | 343 Mbits/sec | 278 Mbits/sec |
+| RTL8156 cdc_ncm | 195 Mbits/sec | 877 | 255 Mbits/sec | 199 Mbits/sec | 91.9 Mbits/sec | 346 Mbits/sec | 261 Mbits/sec |
+| RTL8156 rt8152_oot | 333 Mbits/sec | 42 | 286 Mbits/sec | 174 Mbits/sec | 163 Mbits/sec | 343 Mbits/sec | 278 Mbits/sec |
+
+These numbers can't tell how much more stable rt8152_oot performance is. TCP performance could previously drop to under 50 Mbits/sec and Moonlight/Aurora was just unusable.
 
 # License
 

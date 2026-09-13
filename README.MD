@@ -34,7 +34,7 @@ So this module is *NOT* generic, I built it for *my* TV, it's unlikely to work a
 
 * Root your TV https://cani.rootmy.tv/
 * Upload kernel module and script to /home/root (or really anywhere you like...)
-* Chmod +x /home/root/r8152-autobind.sh
+* chmod +x /home/root/r8152-autobind.sh
 * /home/root/r8152-autobind.sh start - this doesn't install permanent integration but will replace the modules until reboot
 * /home/root/r8152-autobind.sh status - shows what it's up to
 * /home/root/r8152-autobind.sh install - installs permanent agent

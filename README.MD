@@ -40,6 +40,6 @@ So this module is *NOT* generic, I built it for *my* TV, it's unlikely to work a
 * /home/root/r8152-autobind.sh install - installs permanent agent
 * I uploaded all the stuff produced by Codex in output folder as well, look inside if you're interested, it has more details (including removal)
 
-#License
+# License
 
 MIT - so use at your own peril.

@@ -5,8 +5,8 @@ Like most (all?) TV-s, it has a 100M NIC that can be insufficient for Sunshine-M
 So I took some random USB-to-Ethernet adapters with Realtek chipsets.
 While they worked, performance can be quite bad. On newer RTL8156 based ones (2.5G) it was even worse than built-in NIC.
 RTL8153 based 1G was tolerable but had random drops when streaming even at low bitrates.
-All Realtek NICs bind to generic cdc_ncm driver that doesn't do so well.
-So I started investigating. Apparently this TV's kernel has a stub or basically nonfunctional r8152 driver built-in that doesn't register basically anything.
+All my Realtek NICs bind to generic cdc_ncm driver that doesn't do so well.
+So I started investigating. Apparently this TV's kernel has really old builtin r8152 driver that didn't recognize any USB NICs that I had lying around (even if forced).
 This implies that I'd have to use a custom name for the module.
 There's some random modules (for example https://github.com/mbenitez343/lg-webos-2024-ethernet-fix) but these are for different platforms and imply no built-in module.
 
@@ -20,7 +20,7 @@ It integrates Realtek's latest driver (v2.22.1 right now) with some minor change
 Free ChatGPT produced many failed builds that didn't work properly for many reasons (wrong sources, ABI problems).
 Payed Codex then did some magic, analyzed the existing kernel, spent a lot of tokens and after a lot of debug and back-and-forth spit out a module named r8152_oot.ko that actually seems to work.
 Then I asked it to generate a script that would auto-attach the driver as the kernel still attaches cdc_ncm by default even if r8152_oot.ko is loaded.
-It works both manually
+It works both manually and via script.
 
 # Disclaimer
 So this module is *NOT* generic, I built it for *my* TV, it's unlikely to work anywhere else
@@ -33,13 +33,19 @@ So this module is *NOT* generic, I built it for *my* TV, it's unlikely to work a
 # How to use
 
 * Root your TV https://cani.rootmy.tv/
+* Install Homebrew Channel (comes with rooting...)
 * Upload kernel module and script to /home/root (or really anywhere you like...)
 * chmod +x /home/root/r8152-autobind.sh
-* /home/root/r8152-autobind.sh start - this doesn't install permanent integration but will replace the modules until reboot
+* /home/root/r8152-autobind.sh start - this doesn't install permanent integration but will watch and replace the modules until reboot
 * /home/root/r8152-autobind.sh status - shows what it's up to
-* /home/root/r8152-autobind.sh install - installs permanent agent
+* /home/root/r8152-autobind.sh install - installs permanent watcher that attaches to Homebrew Channel root startup hook.
 * I uploaded all the stuff produced by Codex in output folder as well, look inside if you're interested, it has more details (including removal)
+
+# Possible issues
+* If both NICs (builtin and USB) are connected, Linux may route egress via built-in eth0 so you don't see increased bandwidth. TL;DR: disconnect builtin NIC when the module starts working.
+* Not sure if it is totally stable. I've seen USB NIC drop off sometimes, will investigate.
 
 # License
 
 MIT - so use at your own peril.
+Realtek stuff remains GPL-2.0.

@@ -152,6 +152,14 @@ built-in NIC to disable the script; do not delete or rewrite firmware partitions
 - Failed binding gets a best-effort CDC rebind only if the original interface is
   still present and unbound. A later queued configuration switch may supersede
   it. There is no forced configuration rollback or USB reset loop.
+- After every successful attachment, the watcher disables the driver's internal
+  scatter-gather transmit aggregation at `rtl_adv/sg_en`. This is an O22-specific
+  stability workaround: with SG enabled, sustained bidirectional traffic caused
+  an `r8152_oot` TX watchdog and then the TV's xHCI controller to die. SG is
+  checked again on each scan, so it is also disabled for an adapter already bound
+  when the watcher starts. It can reduce performance on some hardware, but the
+  O22 RTL8156 test retained approximately 285 Mbit/s one-way TX and remained
+  stable for at least 40 minutes of bidirectional traffic.
 - Kernel panics/hangs cannot be made safe by a shell script. This uses the module
   already tested with both adapters; first boot/hotplug and standby tests remain
   necessary. Do not depend solely on Homebrew's startup failsafe to catch faults

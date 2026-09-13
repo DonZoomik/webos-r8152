@@ -107,6 +107,24 @@ ours_attached() {
     return 1
 }
 
+disable_sg_for_device() {
+    # On this O22 / xHCI path, the driver's SG transmit aggregation caused a
+    # TX watchdog followed by an xHCI controller death during bidirectional
+    # stress.  The attribute is created by r8152_oot under the netdev, not the
+    # USB interface.  Missing nodes are normal during re-enumeration.
+    for check_interface in "$USB/$1":*; do
+        [ -d "$check_interface" ] || continue
+        [ "$(driver_of "$check_interface")" = "$DRIVER" ] || continue
+        for netdev in "$check_interface"/net/*; do
+            [ -d "$netdev" ] || continue
+            sg_file=$netdev/rtl_adv/sg_en
+            [ -r "$sg_file" ] || continue
+            [ "$(value "$sg_file")" = disable ] ||
+                sys_write "$sg_file" disable || :
+        done
+    done
+}
+
 sys_write() {
     # Kept in one place for review/testing. A vanished sysfs node is expected
     # during unplug or the driver's asynchronous configuration 2 -> 1 switch.
@@ -122,7 +140,10 @@ handle_device() (
     pid=$(value "$device/idProduct") || return
     supported_id "$vid:$pid" || return
     token=$(device_token "$device") || return
-    ours_attached "$name" && return
+    if ours_attached "$name"; then
+        disable_sg_for_device "$name"
+        return
+    fi
 
     # Select just one eligible control/vendor interface per device per scan.
     selected=
@@ -171,6 +192,7 @@ handle_device() (
     sleep 1
     [ "$(device_token "$device")" = "$token" ] || return
     if ours_attached "$name"; then
+        disable_sg_for_device "$name"
         log "$name: attached to $DRIVER. Network setup remains with webOS."
         return
     fi
@@ -292,8 +314,9 @@ show_status() {
     if is_running; then printf 'Worker: PID %s\n' "$worker_pid"; else printf 'Worker: stopped\n'; fi
     for net in /sys/class/net/*; do
         [ "$(driver_of "$net/device")" = "$DRIVER" ] || continue
-        printf '%s: %s, carrier=%s, speed=%s Mbit/s\n' "${net##*/}" "$DRIVER" \
-            "$(value "$net/carrier" 2>/dev/null)" "$(value "$net/speed" 2>/dev/null)"
+        printf '%s: %s, carrier=%s, speed=%s Mbit/s, sg=%s\n' "${net##*/}" "$DRIVER" \
+            "$(value "$net/carrier" 2>/dev/null)" "$(value "$net/speed" 2>/dev/null)" \
+            "$(value "$net/rtl_adv/sg_en" 2>/dev/null || printf unavailable)"
     done
     printf '\nRecent worker events:\n'
     tail -n 15 "$STATE/events.log" 2>/dev/null || :

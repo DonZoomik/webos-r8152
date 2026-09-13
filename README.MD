@@ -43,7 +43,7 @@ So this module is *NOT* generic, I built it for *my* TV, it's unlikely to work a
 
 # Possible issues
 * If both NICs (builtin and USB) are connected, Linux may route egress via built-in eth0 so you don't see increased bandwidth. TL;DR: disconnect builtin NIC when the module starts working.
-* Not sure if it is totally stable. I've seen USB NIC drop off sometimes, will investigate.
+* Having scatter-gather enabled causes TV's USB host to die after some time. It is disabled at driver attach.
 
 # License
 
